@@ -401,6 +401,7 @@ header {
 .contactme form button:hover{
     scale: 101% ;
     background-color: #57575742;
+    cursor: pointer;
 }
 
 /* FOOTER */
