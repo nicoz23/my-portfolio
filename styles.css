@@ -1,0 +1,416 @@
+@font-face {
+    font-family: "symbols";
+    src: url(fonts/websymbols-regular-webfont.ttf);
+}
+
+.symbols{
+    font-family: symbols;
+    color: #fff;
+}
+/*     Scrollbar    */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ff0844 #212121;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #212121;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff0844;
+    border-radius: 5px;
+  }
+
+/*     PARTICULAS     */
+#particles-js{
+    background-color: #212121;
+    height: 100vh;
+    width: 100%;
+    object-fit: fill;
+    position: fixed;
+    z-index: -1;
+}
+
+.textColor{
+    background-image: linear-gradient(to top, #ff0844 0%, #fd3624 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.go-top-container{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    width: 1em;
+    height: 1em;
+    z-index: -1;
+}
+
+.go-top-button{
+    width: 0;
+    height: 0;
+    background-image: linear-gradient(to top, #ff0844 0%, #ec572a 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button p{
+    position: absolute;
+    font-size: 1.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+    margin: auto;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .go-top-button{
+    animation: popup .2s ease-in-out;
+    -webkit-animation: popup .2s ease-in-out;
+    width: 3rem;
+    height: 3rem;
+    z-index: 11;
+}
+
+.show p{
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -moz-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    -o-transform: translate(-50%, -50%) scale(1);}
+
+@keyframes popup {
+    0%{
+        width: 0;
+        height: 0;
+    }
+    50%{
+        width: 4em ;
+        height: 4em ;
+    }
+    100%{
+        width: 3em;
+        height: 3em;
+    }
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background: transparent;
+}
+
+/*       BANNER      */
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-color: #00000040;
+    /* border: 1px solid #484848; */
+    border-radius: 5px;
+    padding: 1%;
+    
+}
+
+/*       BANNER Titles  */
+
+#title {
+    display: block;
+    padding-top: 5%;
+    color: #fff;
+}
+
+#subtitle {
+    padding-top: 1.25em;
+    color:#fff;
+}
+
+#download-cv {
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 0.5em;
+    display: block;
+    width: fit-content;
+    transition: ease-in-out .2s;
+    float: right;
+    background-color: transparent;
+}
+
+#download-cv:hover {
+    scale: 110%;
+}
+
+
+/*!      BANNER Buttons      */
+
+
+.button:hover {
+    scale: 110%;
+}
+
+.button a, .button a:visited{
+    padding: 0.3125em; 
+    text-decoration: none;
+    color: #fff;
+}
+
+/*     Sections      */
+
+#sections{
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+}
+
+.section{
+    width: 90% ;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sectionTitle{
+    color: #fff;
+    font-size: 40px;
+    margin: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #484848;
+    width: max-content;
+}
+
+/*      Projects Area   */
+
+.projectColumn{
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 3% 1%;
+}
+
+.project{
+    /* width: 100%; */
+    transition: ease-in-out .2s;
+}
+
+.project:hover{
+    transform: translateY(-3px);
+}
+
+.project a, .project a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+.project:hover .projectTitle{
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+.project img{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    object-fit:cover;
+    height: 250px;
+}
+
+.projectTitle{
+    display: inline-block;
+    width: 97%;
+    top: auto;
+    padding: 1.5%;
+    transition: ease-in-out .2s;
+}
+
+#codeLink {
+    float: right;
+    color: #fd3624;
+}
+
+#codeLink:hover {
+    text-decoration: underline;
+}
+
+/*      About me info   */
+
+
+/* .doubleSection {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    gap: 2%;
+    color: #fff;
+}
+
+.aboutmeStyles { grid-area: 1 / 1 / 2 / 2; }
+.skills { 
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: center;
+} */
+
+.item{
+    display: inline-block;
+    background-color: #ff0844;
+    border-radius: 50%;
+    width: 15px ;
+    height: 15px ;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+#aboutmeText{
+    display: block;
+    width: 60%;
+    padding-top: 50px;
+    margin-right: 5%;
+    float: right;
+}
+
+#imgAbout{
+    display: block;
+    /* height: 250px; */
+    /* margin-top: 20px; */
+    border-radius:50%;
+    filter: grayscale(100%);
+}
+
+.tecLogo {
+    height: 80px;
+    width: 80px;
+    padding: 3px;
+    object-fit: contain;
+}
+
+.langs {
+    width: 100%;
+}
+
+.fw {
+    width: 100%
+}
+
+.tecno {
+    width: 80%;
+    margin-left: auto;margin-right: auto;
+}
+
+/*     Contact me form     */
+
+#contact{
+    height: 80vh;
+    padding: 2% ;
+    width: 96%;
+}
+
+#titleContact{ 
+    font-size: 40px;
+    margin-left: auto;margin-right: auto;
+    border-bottom: 1px solid #484848;
+    width: max-content;
+    color: #fff;
+}
+
+
+.contactme{ /* div */
+    width: 40%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactme form{
+    display: flex;
+    flex-flow: column;
+}
+
+.contactme form input{
+    background-color: transparent;
+    border:none;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+}
+
+.contactme form label{
+    margin-left: 2%;
+    width: 100%;
+    color: #fff;
+}
+
+.contactme form textarea{
+    color: #fff;
+    border:none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    margin-bottom: 20px;
+
+    background-color: transparent;
+    resize: none;
+    width: 100%;
+}
+
+.contactme form button{
+    width: 90%;
+    height: 40px;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 10px;
+    border-color: #fff;
+    font-size: 17px;
+    transition: ease-in-out .2s;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactme form button:hover{
+    scale: 101% ;
+    background-color: #57575742;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 2%;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+}
