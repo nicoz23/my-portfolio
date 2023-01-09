@@ -282,20 +282,34 @@
       <section id="contact">
         <p id="titleContact">CONTACT ME</p>
         <div class="contactme">
-          <form name="contact" netlify method="POST" data-netlify="true">
-            <label for="fullname">Fullname</label>
-            <input id="fullname" type="text" />
+          <form name="contact" netlify method="POST" data-netlify="true" action="">
+            
+            <div>
+              <label for="fullname">Fullname</label>
+              <p class="fullnameError">The full name must contain between 4 and 40 characters.</p>
+              <input id="fullname" name="fullname" type="text" autocomplete="off"/>
+            </div>
 
-            <label for="email">Email adress</label>
-            <input id="email" type="email" />
+            <div>
+              <label for="email">Email adress</label>
+              <p class="emailError show">Mail can only contain letters, numbers, periods, hyphens and underscores.</p>
+              <input id="email" name="email" type="email" autocomplete="off"/>
+            </div>
 
-            <label for="affair">Affair</label>
-            <input id="affair" type="text" />
+            <div>
+              <label for="affair">Affair</label>
+              <p class="affairError">The affair must contain between 3 and 16 characters.</p>
+              <input id="affair" name="affair" type="text" autocomplete="off"/>
+            </div>
 
-            <label for="textarea">Message</label><br />
-            <textarea id="textarea" rows="4"></textarea>
-
+            <div>
+              <label for="textarea">Message</label>
+              <p class="textareaError">The message must contain something.</p>
+              <textarea id="textarea" name="textarea" rows="4" autocomplete="off"></textarea>
+            </div>
+            
             <button type="submit">SEND</button>
+            <p class="submitSuccess">Form successfully submitted.</p>
           </form>
         </div>
       </section>
@@ -313,6 +327,7 @@
     </div>
 
     <script src="particles.js-master/particles.js"></script>
+    <script type="text/javascript" src="form-validation.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
