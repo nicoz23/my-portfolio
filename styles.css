@@ -403,6 +403,33 @@ header {
     background-color: #57575742;
     cursor: pointer;
 }
+/* VALIDATION FORM*/
+.formInvalid {
+    border-color: #ff0000 !important;
+}
+.formValid {
+    border-color: #55bb11 !important;
+}
+
+.fullnameError, .emailError, .affairError, .textareaError {
+    display: none;
+}
+
+.submitSuccess {
+    display: none;
+}
+
+.submitShow {
+    display: block;
+    color: #55bb11;
+    margin-left: auto; margin-right: auto;
+}
+
+.showError {
+    display: block;
+    color: red;
+}
+
 
 /* FOOTER */
 
