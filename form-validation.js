@@ -77,7 +77,7 @@ inputs.forEach((input) =>{
 })
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     if(fields.fullname && fields.email && fields.affair && fields.textarea){
         document.querySelector('.submitSuccess').classList.add('submitShow')
