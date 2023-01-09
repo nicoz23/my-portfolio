@@ -5,7 +5,7 @@ const textArea = document.getElementById('textarea')
 const expressions = {
     fullname: /^[a-zA-ZÀ-ÿ\s]{4,40}$/,
 	mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    affair: /^[a-zA-Z0-9\_\-]{3,16}$/
+    affair: /^[a-zA-Z0-9\_\-\s]{3,16}$/
 }
 
 const fields = {
