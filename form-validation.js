@@ -1,4 +1,4 @@
-const form = document.getElementById('contact')
+const form = document.getElementById('formContact')
 const inputs = document.querySelectorAll('#contact input')
 const textArea = document.getElementById('textarea')
 
@@ -77,12 +77,13 @@ inputs.forEach((input) =>{
 })
 
 form.addEventListener('submit', (e) => {
-    // e.preventDefault();
+     e.preventDefault();
 
     if(fields.fullname && fields.email && fields.affair && fields.textarea){
         document.querySelector('.submitSuccess').classList.add('submitShow')
         setTimeout(() => {
             document.querySelector('.submitSuccess').classList.remove('submitShow')
+	    form.reset(
         }, 5000);
     }
 });
