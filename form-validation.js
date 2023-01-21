@@ -83,7 +83,7 @@ form.addEventListener('submit', (e) => {
         document.querySelector('.submitSuccess').classList.add('submitShow')
         setTimeout(() => {
             document.querySelector('.submitSuccess').classList.remove('submitShow')
-	    form.reset(
+	    form.reset()
         }, 5000);
     }
 });
